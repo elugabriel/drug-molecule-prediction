@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Model Prediction</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+   <img id="banner" src="{{ url_for('static', filename='bg3.png') }}" alt="">
+    <h1>Model Prediction</h1>
+
+    <div class="form-container">
+        
+        <form id="prediction-form" action="/predict" method="POST">
+            <div class="column">
+                <label for="feature1">FASA_H</label>
+                <input type="text" id="feature1" name="FASA_H" required><br><br>
+
+                <label for="feature2">FASA_P</label>
+                <input type="text" id="feature2" name="FASA_P" required><br><br>
+
+                <label for="feature3">PEOE_VSA_FHYD</label>
+                <input type="text" id="feature3" name="PEOE_VSA_FHYD" required><br><br>
+
+                <label for="feature4">PEOE_VSA_FPNEG</label>
+                <input type="text" id="feature4" name="PEOE_VSA_FPNEG" required><br><br>
+
+                <label for="feature5">PEOE_VSA_FPOL:</label>
+                <input type="text" id="feature5" name="PEOE_VSA_FPOL" required><br><br>
+
+                <input type="submit" value="Predict">
+
+                
+
+            </div>
+            <div class="column">
+                <label for="feature6">Q_VSA_FHYD</label>
+                <input type="text" id="feature6" name="Q_VSA_FHYD" required><br><br>
+
+                <label for="feature7">Q_VSA_FPNEG</label>
+                <input type="text" id="feature7" name="Q_VSA_FPNEG" required><br><br>
+
+                <label for="feature8">Q_VSA_FPOL</label>
+                <input type="text" id="feature8" name="Q_VSA_FPOL" required><br><br>
+
+                <label for="feature9">Q_VSA_PNEG</label>
+                <input type="text" id="feature9" name="Q_VSA_PNEG" required><br><br>
+
+                <label for="feature10">SlogP</label>
+                <input type="text" id="feature10" name="SlogP" required><br><br>
+            </div>
+        </form>
+        
+    </div>
+
+    <div id="prediction-result">
+        <h1>The predicted class is: {{ prediction }}</h1>
+    </div>
+</body>
+</html>

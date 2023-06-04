@@ -1,0 +1,66 @@
+body {
+    background-color: #e1e1e6; /* Replace with your desired color */
+}
+
+h1 {
+    text-align: center;
+}
+
+.form-container {
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="submit"] {
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+#prediction-result {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#banner{
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 16px;
+  }
+
+.form-container {
+    display: flex;
+    }
+.column {
+    flex: 1;
+    margin-right: 20px;
+    }
+#prediction-form {
+    display: flex;
+    flex-direction: row;
+    }
+.column:last-child {
+    margin-right: 0;
+    }
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    grid-column: span 2
+    }
+
+
+.form-description {
+    text-align: left;
+    margin-bottom: 20px;
+}
